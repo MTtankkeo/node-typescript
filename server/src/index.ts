@@ -4,7 +4,7 @@ import path from "path";
 import mime from "mime-types";
 
 const contentTypeOf = (path: string) => {
-    return mime.lookup("html") || "application/octet-stream";
+    return mime.lookup(path) || "application/octet-stream";
 }
 
 const server = http.createServer((request, response) => {
